@@ -239,3 +239,33 @@ const calculateGrade = (score) => {
 }
 
 console.log('Exercise 10 Result:', calculateGrade(85))
+
+/*
+Exercise 11: createUsername()
+
+Define a function called createUsername. 
+It should take a first name and a last name and return a username. 
+
+The username should be a combination of the following:
+- The first three letters of the first name.
+- The first three letters of the last name.
+- The total character count of the first and last name combined.
+
+Example: createUsername('Samantha', 'Green') should return 'SamGre13'.
+
+Complete the exercise in the space below:
+*/
+
+const createUsername = (first, last) => {
+  let firstT = ''
+  let lastT = ''
+  let nlength = first.length + last.length
+
+  for (let i = 0; i < 3; i++) {
+    firstT += first[i]
+    lastT += last[i]
+  }
+  return firstT + lastT + nlength
+}
+
+console.log('Exercise 11 Result:', createUsername('Samantha', 'Green'))
